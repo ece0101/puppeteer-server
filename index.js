@@ -4,6 +4,10 @@ const puppeteer = require('puppeteer');
 
 const app = express();
 app.use(cors());
+app.get("/", (req, res) => {
+    res.send("Server çalışıyor!");
+});
+
 app.use(express.json());
 
 app.post('/search', async (req, res) => {
